@@ -1,22 +1,55 @@
 {% extends 'main.html' %}
 
 {% block title %}Homepage{% endblock title %}Homepage
+{% load static %}
+{% block body %}
+<main id = "team" class="pb-5 col d-flex justify-content-center align-items-center">
+  <div class="container">
 
-{% block body %} 
-<center>
-<div>
-  <a href="/start" target="_parent">
-    <button type="button" class="btn btn-info">START ATTENDANCE</button>
-  </a>
-  <a href="/reg_teacher" target="_parent">
-  <button type="button" class="btn btn-info">REGISTER TEACHER</button>
-  </a>
-  <a href="/reg_student" target="_parent">
-  <button type="button" class="btn btn-info">REGISTER STUDENT</button>
-  </a>
-  
-</div>
-</center>
+      <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <div class="frontside">
+              <div class="card">
+                  <div class="card-body text-center">
+                    <p>
+                      <img class=" img-fluid " src="{% static 'teacher.jpg' %}" alt="card image">
+                    </p>
+                    <a href="/reg_teacher" target="_parent" class = "btn btn-info btn-lg">REGISTER TEACHER</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12  col-md-4">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p>
+                    <img class=" img-fluid" src="{% static 'start_attendance.png' %}" alt="card image">
+                  </p>
+                  <a href="/start" target="_parent" class = "btn btn-info btn-lg">START ATTENDANCE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p>
+                                    <img class=" img-fluid" src="{% static 'student.png' %}" alt="card image">
+                                  </p>
+                                  <a href="/reg_student" target="_parent" class="btn btn-info btn-lg">REGISTER STUDENT
 
+        </a></div>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+
+
+      </div>
+  </div>
+</main>
 {% endblock body %} 
-
